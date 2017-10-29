@@ -33,10 +33,9 @@ def create_obj(headers, line, type)
   type.create(obj)
 end
 
-def fill_data(filename, type, merged, assoc)
+def fill_data(filename, type, merged)
   File.open(filename,
   'r') do |file|
-    #byebug
     if merged
       lines = file.gets
       lines = lines.split("\r")
@@ -54,6 +53,6 @@ def fill_data(filename, type, merged, assoc)
   end
 end
 
-fill_data('./db/csv/events.csv', Event, false, false)
-fill_data('./db/csv/people.csv', Person, true, false)
-fill_data('./db/csv/assistance.csv', Attendance, true, true)
+fill_data('./db/csv/events.csv', Event, false)
+fill_data('./db/csv/people.csv', Person, true)
+fill_data('./db/csv/assistance.csv', Attendance, true)

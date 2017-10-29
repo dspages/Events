@@ -4,6 +4,4 @@ class Api::PeopleController < ApplicationController
     render json: Person.all
   end
 
-  private
-
 end
