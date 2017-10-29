@@ -1,0 +1,9 @@
+<div class="outer-div">
+  <% @event.people.each do |person| %>
+    <div class="inner-div">
+      <%= person.first_name %>
+      <%= person.last_name %>
+      <br>
+    </div>
+  <% end %>
+</div>

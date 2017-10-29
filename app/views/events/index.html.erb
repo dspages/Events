@@ -1,0 +1,11 @@
+<div class="outer-div">
+  <% @events.each do |event| %>
+  <div class="inner-div">
+    <p><%= event.name %></p>
+    <p><%= event.location %></p>
+    <p><%= event.price %></p>
+    <p><%= event.date %></p>
+    <p><%= link_to "Display event", event_url(event) %></p>
+  </div>
+  <% end %>
+</div>
